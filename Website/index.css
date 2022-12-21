@@ -1,0 +1,649 @@
+/* Position absolute takes the element out completely but it moves the element relative to the parent element. 
+    If Not specified ie. Parent then it will take the HTML document as it's parent and move it absolute to that
+    It Uses 4 parameters : Top, left, bottom, right 
+    
+    
+Position fixed has nothing to do with any parent elements and only moves relative to HTML document. THEY STAY IN THE VERY SAME PLACE WHEN YOU SCROLL
+    
+Position Sticky by default is relative but as son as the parameters specified have been reached by the document eg top = 0 then it will stick to that location in the document*/
+/* Position relative and it moves an element out of the normal documnet flow relative to it's initial static position*/
+/* Don't use it with top, left , right and bottom ☝️ */
+/* font-family: 'Outfit', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+body{
+    background-color: #000131;
+    max-width: 100%;
+}
+/* Circle styles */
+div.circle{
+position: absolute;
+width: 727px;
+height: 718px;
+left: 1000px;
+top: 329px;
+background: rgba(152, 213, 214, 0.6);
+filter: blur(117px);
+}
+div.circlet{
+position: absolute;
+width: 727px;
+height: 718px;
+left: 97px;
+top: -384px;
+background: rgba(143, 142, 219, 0.6);
+filter: blur(117px);
+}
+/* Navbar Styles */
+.navbar{
+    max-width: 100%;
+    position: relative;
+    height: 100px;
+    background: rgba(18, 17, 75, 0.4);
+}
+ul.nav{
+    position: absolute;
+    top: 45px;
+    left: 100px;
+    width: 1065px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+li.logo{
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-right: 500px;
+}
+a.logo-href{
+    text-decoration: none; 
+    color: #FFFFFF;
+}
+li.link{
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+color: #FFFFFF;    
+transition: 0.4s ease-in;
+}
+li.link:hover{
+
+    color: #AAD9D9;
+    cursor: pointer;
+}
+/* Hero Section Styles  */
+section.hero{
+    position: relative;
+    width: 1064px;
+    height: 564px;
+}
+div.hero-article{
+    position: absolute;
+    left: 100px;
+    top: 120px;
+}
+h1.main-header{
+width: 540px;
+height: 252px;
+font-family: 'Outfit',sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 100%;
+text-transform: capitalize;
+color: #FFFFFF;
+}
+p.body-text{
+font-family: 'Roboto',sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 40px;
+color: #FFFFFF;
+width: 526px;
+height: 112px;
+}
+div.hero-image{
+    position: absolute;
+    top: 30px;
+    left: 712px;
+}
+img.himage{
+    width: 539px;
+    height: 564px;
+}
+button.buy{
+    width: 255px;
+    height: 70px;
+    border: none;
+    border-radius: 83px;
+    background-color: #8F8EDB;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: 0.5s ease-out;
+}
+button.sell{
+    position: absolute;
+    left: 275px;
+    width: 255px;
+    height: 70px;
+    border-radius: 83px;
+    border: 1px solid #98D5D6;
+    background-color: #000131;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: 0.5s ease-out;
+}
+button.buy:hover{
+    background-color: #AAD9D9;
+    cursor: pointer;
+}
+button.sell:hover{
+    border: 1px solid #8F8EDB;
+    cursor: pointer;
+}
+/* Partners Section Styles */
+section.featured{
+    position: relative;
+    width: 1064px;
+    height: 152px;
+}
+.sub-container{
+    position: absolute;
+    top: 167px;
+    left: 100px;
+}
+h3.sub-heading{
+font-family: 'Outfit', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 28px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.partner-container{
+    position: absolute;
+    top: 219px;
+    left: 100px;
+    width: 1064px;
+    height: 100px;
+    background: rgba(91, 81, 179, 0.2);
+    border-radius: 10px;
+}
+ul.logos{
+position: relative;
+display: flex;
+justify-content: space-between;
+}
+img.logo1{
+    position: absolute;
+    top: 21px;
+    left: 101px;
+    width: 154px;
+    height: 57px;
+}
+img.logo2{
+position: absolute;
+top: 40px;
+left: 396px;
+ width: 137px;
+ height: 21px;
+}
+img.logo3{
+    position: absolute;
+    top: 38px;
+    left: 674px;
+    width: 94px;
+    height: 24px;
+}
+img.logo4{
+    position: absolute;
+    top: 38px;
+    left: 909px;
+    width: 55px;
+    height: 31px;
+}
+
+/* Analytics Section Styles */
+section.analytics{
+position: relative;
+width: 1024px;
+height: 427px;
+}
+div.analytic-img{
+    position: absolute;
+    top: 300px;
+    left: 142px;
+}
+img.analyst{
+    width: 441px;
+    height: 386px;
+}
+div.analytics-article{
+    position: absolute;
+    top: 300px;
+    left: 646px;
+}
+h3.ana{
+    color: #AAD9D9;
+    margin-bottom: 19px;
+}
+h2.lesser-heading{
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 57px;
+line-height: 100%;
+text-transform: capitalize;
+color: #FFFFFF;
+}
+h2.built{
+    margin-bottom: 19px;
+}
+p.pana{
+    margin-bottom: 35px;
+}
+button.Pricing{
+    width: 255px;
+    height: 70px;
+    border-radius: 83px;
+    background-color: #8F8EDB;
+    border: none;
+    font-family: 'Outfit',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: 0.5s ease-in;
+}
+button.Pricing :hover {
+    background-color: #AAD9D9;
+    cursor: pointer;
+}
+
+
+/* Get our App Styles */
+section.getApp{
+    position: relative;
+    width: 1024px;
+    height: 427px;
+}
+div.app-article{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+}
+div.app-img{
+    position: absolute;
+    top: 300px;
+    left: 717px
+}
+img.app{
+    width: 430px;
+    height: 386px;
+}
+
+h3.get{
+    color: #DFC27C;
+    margin-bottom: 19px;
+}
+h2.browse{
+   margin-bottom: 19px;
+   width: 628px;
+}
+button.Download:hover{
+    background-color: #AAD9D9;
+    cursor: pointer;
+}
+button.Download{
+    width: 255px;
+    height: 70px;
+    border-radius: 83px;
+    background-color: #8F8EDB;
+    border: none;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;   
+    transition: 0.5s ease-in;
+}
+
+/* Testemonial Styles */
+section.testemonial-container{
+    position: relative;
+    width: 1065px;
+    height: 603px;
+}
+div.headline-container {
+    position: absolute;
+    width: 486px;
+    height: 180px;
+    left: 390px;
+    top: 477px;
+    text-align: center;
+}
+h3.ana2{
+    color: #AAD9D9;
+    margin-bottom: 38px;
+}
+div.testemonial-cards{
+    position: absolute;
+    width: 1065px;
+    height: 338px;
+    left: 100px;
+    top: 742px
+}
+ul.card{
+position: relative;
+display: flex;
+justify-content: space-between;
+}
+
+
+/* Card no. 1 */
+li.card1{
+position: absolute;
+width: 345px;
+height: 338px;
+margin-right: 15px;
+}
+div.mask-container1{
+    position: absolute;
+    width: 137px;
+    height: 143px;
+    left: 104px;
+}
+img.Person1{
+width: 135px;
+height: 143px;
+border-radius: 100%;
+border: none;
+background: url(\images\Person1.png);
+mix-blend-mode: luminosity;
+}
+div.testemonial-content{
+    position: absolute;
+    width: 345px;
+    height: 286px;
+    top: 72px;
+    z-index: -1;
+    background: #12114B;
+    border-radius: 20px;
+    padding-top: 101px;
+  text-align: center;
+}
+h3.olivia{
+    color: #AAD9D9;
+    margin-bottom: 30px;
+}
+p.small-body{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+text-align: center;
+color: #FFFFFF;
+}
+
+/* Card no. 2 */
+li.card2{
+    position: absolute;
+    width: 345px;
+    height: 338px;
+    left: 360px;
+    }
+    div.mask-container2{
+        position: absolute;
+        width: 137px;
+        height: 143px;
+        left: 104px;
+    }
+    img.Person2{
+    width: 135px;
+    height: 143px;
+    border-radius: 100%;
+    border: none;
+    background: url(\images\Person2.png);
+    mix-blend-mode: luminosity;
+    }
+    h3.evan{
+        color: #AAD9D9;
+        margin-bottom: 30px;
+    }
+    /* Card no. 3 */
+li.card3{
+    position: absolute;
+    width: 345px;
+    height: 338px;
+    left: 720px;
+    }
+    div.mask-container3{
+        position: absolute;
+        width: 137px;
+        height: 143px;
+        left: 104px;
+    }
+    img.Person3{
+    width: 135px;
+    height: 143px;
+    border-radius: 100%;
+    border: none;
+    background: url(\images\Person3.png);
+    mix-blend-mode: luminosity;
+    }
+    h3.page{
+        color: #AAD9D9;
+        margin-bottom: 30px;
+    }
+
+
+ /* Huge Call To Action Styles  */
+ section.cta{
+    position: relative;
+ }
+ div.background{
+    position: absolute;      
+    width: 1065px;
+    height: 400px;
+    background: linear-gradient(98.5deg, #4947D6 -6.64%, #66D0D1 98.72%);
+    border-radius: 30px;
+    left: 100px;
+    top: 567px;
+ }
+ div.hcta{
+    text-align: center;
+    position: absolute;
+    width: 436px;
+    height: 297px;
+    top: 66px;
+    left: 315px;
+ }
+ h3.ready{
+    margin-bottom: 28px;
+ }
+ h2.big{
+    margin-bottom: 57px;
+ }
+ button.start{
+position: absolute;
+left: 49px;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 21px 61px;
+gap: 10px;
+background: #000000;
+border-radius: 83px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 28px;
+line-height: 28px;
+/* identical to box height, or 98% */
+
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+transition: 0.5s ease-out;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+ }
+ button.start:hover{
+    transform: translateY(3px) translateZ(10px) translateX(5px);
+    box-shadow: -5px 5px 4px rgba(7, 18, 19, 0.8); /* Box Shadow property: x-offset | y offset | blur | color*/
+ }
+footer.infolog{
+position: relative;
+width: 100%;
+height: 372px;
+}
+div.list-container{
+position: absolute;
+top: 1100px;
+width: 100%;
+height: 355px;
+background: rgba(18, 17, 75, 0.4);
+padding-left: 100px;
+display: flex;
+justify-content: space-between;
+
+}
+li.tag-logo{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 64px;
+}
+a.tag{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div.line{
+position: absolute;
+width: 100%;
+height: 17px;
+left: 0px;
+top: 1455px;
+background: linear-gradient(98.5deg, #4947D6 -6.64%, #66D0D1 98.72%);
+}
+li.tag-heading{
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+color: #FFFFFF;
+margin-bottom: 19px;
+}
+li.footer-text{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 31px;
+color: #FFFFFF;
+}
+li.tag-logo2{
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 28px;
+color: #FFFFFF;
+margin-right: 239px;
+margin-bottom: 21px;
+}
+ul.nav-items{
+    margin-top: 64px;
+}
+ul.markets{
+    margin-top: 64px;
+}
+ul.socials{
+    margin-top: 64px;
+}
+ul.input{
+    margin-top: 64px;
+}
+.container{
+    position: relative;
+}
+.input-container{
+position: absolute;
+width: 320px;
+height: 56px;
+background: #12114B;
+border-radius: 70px;
+border: none;
+padding-left: 12px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 31px;
+color: #FFFFFF;
+opacity: 0.7;
+}
+button.submit{
+position: absolute;
+left: 156px;
+z-index: 1;
+width: 140;
+height: 56px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 60px;
+gap: 10px;
+background: #8F8EDB;
+border-radius: 83px;
+
+}
